@@ -1,13 +1,24 @@
-// import Head from 'next/head'
-// import Image from 'next/image'
-// import { Inter } from '@next/font/google'
+import MeetupList from "@/components/meetups/MeetupList";
 
-// const inter = Inter({ subsets: ['latin'] })
+const dummyMeetups = [
+  {
+    id: 'm1',
+    title: 'm1 meetup',
+    image: '',
+    address: 'meetup address',
+    description: 'meetup desc'
+  },
+  {
+    id: 'm2',
+    title: 'm2 meetup',
+    image: '',
+    address: 'meetup address',
+    description: 'meetup desc'
+  }
+]
 
-export default function Home() {
-  return (
-    <>
-      
-    </>
-  )
+function HomePage() {
+  return <MeetupList meetups={dummyMeetups} />
 }
+
+export default HomePage;
